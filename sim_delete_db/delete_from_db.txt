@@ -1,0 +1,13 @@
+delete from resourcemanagement.sim_allocation where sim_id in (select id from resourcemanagement.sim where msisdn between '5000' and '6000');
+delete from resourcemanagement.sim_allocation where sim_id in (select id from resourcemanagement.sim where imsi between '3000' and '4000');
+delete from resourcemanagement.sim_allocation where sim_id in (select id from resourcemanagement.sim where iccid between '1000' and '2000');
+delete from resourcemanagement.sim where iccid between '1000' and '2000';
+delete from resourcemanagement.sim where imsi between '3000' and '4000';
+delete from resourcemanagement.msisdn where msisdn between '5000' and '6000';
+delete from restgw.tbl_subscriber where subscription_id_data2 between '1000' and '2000';
+delete from restgw.tbl_subscriber where subscription_id_data0 between '3000' and '4000';
+delete from restgw.tbl_subscriber where subscription_id_data1 between '5000' and '6000';
+delete from simlcmanagement.subscription_tag_association where subscription_id in (select id from simlcmanagement.subscription_identity where iccid  between '1000' and '2000');
+delete from resourcemanagement.ip_address  where id in (select id from simlcmanagement.subscription_identity where imsi between '3000' and '4000');
+delete from simlcmanagement.subscription_tag_association where subscription_id in(select id from simlcmanagement.subscription_identity where imsi between '3000' and '4000');
+delete from simlcmanagement.subscription_identity where imsi between '3000' and '4000'

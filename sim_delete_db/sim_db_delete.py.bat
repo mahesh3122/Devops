@@ -1,0 +1,1 @@
+python "sim_db_delete.py"
